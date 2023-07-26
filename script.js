@@ -153,7 +153,11 @@ const FunnyPassword = [
     const numbers = "0123456789";
     const allcharacter = letterUpperCase + letterLowerCase + numbers
     let password = ""
-    for (let i = 0; i < length; i++) {
+    password+= letterUpperCase.charAt(Math.floor(Math.random()*letterUpperCase.length))
+    password+= letterLowerCase.charAt(Math.floor(Math.random()*letterLowerCase.length))
+    password+= numbers.charAt(Math.floor(Math.random()*numbers.length))
+
+    for (let i = 3; i < length; i++) {
       randomIndex = Math.floor(Math.random() * allcharacter.length);
       password += allcharacter[randomIndex];
     }
